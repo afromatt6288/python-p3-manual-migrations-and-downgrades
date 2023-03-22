@@ -20,7 +20,7 @@ class Student(Base):
     __tablename__ = 'students'
 
     id = Column(Integer(), primary_key=True)
-    name = Column(String(), index=True)
+    moniker = Column(String(), index=True)
     email = Column(String(55))
     grade = Column(Integer())
     birthday = Column(DateTime())
@@ -30,3 +30,5 @@ class Student(Base):
         return f"Student {self.id}: " \
             + f"{self.name}, " \
             + f"Grade {self.grade}"
+
+
